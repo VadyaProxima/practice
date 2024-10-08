@@ -12,14 +12,14 @@ h2 {
 }
 .video {
 	position: relative;
-	
+
 	overflow: hidden;
 	max-width: 1200px;
 	margin: auto;
 	margin-top: 64px;
 	margin-bottom: 64px;
 
-	width:auto;
+	width: auto;
 	height: 517px;
 
 	.video__details {
@@ -30,9 +30,10 @@ h2 {
 		height: 100%;
 	}
 }
-.bg {
+.bg-color {
 	background-color: rgba(242, 242, 242, 1);
 }
+
 .items {
 	display: flex;
 	// justify-content: space-between;
@@ -43,70 +44,64 @@ h2 {
 	margin: auto;
 
 	padding: 64px 0px;
+	flex-direction: row;
 
-	.items__group1 {
+	.group1 {
 		border-radius: 5px;
-		.items__group1-elem1 {
+
+		.elem1 {
 			width: 387px;
 			height: 328px;
 			border-radius: 5px 0px 0px 0px;
-			background-image: url(../assets/Background-peas.png);
+			background-image: url(../public/Background-peas.png);
 			display: flex;
 			justify-content: space-between;
 			flex-direction: column;
 			border-radius: 5px;
-		}
-
-		.elem1__top {
-			display: flex;
-			align-items: flex-start;
-			justify-content: space-between;
-			padding: 12px 12px 23px 12px;
-			border-radius: 5px;
-			background: linear-gradient(
-				to bottom,
-				rgba(0, 0, 0, 0.3),
-				rgba(0, 0, 0, 0)
-			);
-
-			.elem1__top-icons {
+			&__top {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+				padding: 12px 12px 23px 12px;
+				border-radius: 5px;
+				background: linear-gradient(
+					to bottom,
+					rgba(0, 0, 0, 0.3),
+					rgba(0, 0, 0, 0)
+				);
+			}
+			&__icons {
 				display: flex;
 				flex-direction: column;
-
 				img {
 					padding-bottom: 4px;
 				}
 			}
-		}
-
-		.elem1__bottom {
-			display: flex;
-			justify-content: space-between;
-			padding: 12px;
-			align-items: flex-end;
-			border-radius: 5px;
-			background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
-
-			.elem1__bottom__discont-info {
-				.elem1__bottom-discont {
-					@include text-shape;
-
-					margin-bottom: 4px;
-					font-weight: 600;
-				}
-
-				.elem1__bottom-info {
-					@include text-shape;
-
-					font-weight: 600;
-					background-color: rgba(255, 167, 38, 1);
-				}
+			&__bottom {
+				display: flex;
+				justify-content: space-between;
+				padding: 12px;
+				align-items: flex-end;
+				border-radius: 5px;
+				background: linear-gradient(
+					to top,
+					rgba(0, 0, 0, 0.3),
+					rgba(0, 0, 0, 0)
+				);
 			}
 
-			.elem1__bottom-price-button {
+			&__discont {
+				@include text-shape;
+				margin-bottom: 4px;
+			}
+
+			&__info {
+				@include text-shape;
+				background-color: rgba(255, 167, 38, 1);
+			}
+			&__button {
 				display: flex;
 				align-items: center;
-
 				p {
 					padding: 6px 8px 6px 0px;
 					font-weight: 700;
@@ -118,107 +113,33 @@ h2 {
 		}
 	}
 
-	.items__group2 {
-		.items__group2-elem1 {
-			width: 387px;
-			height: 154px;
-			border-radius: 5px 0px 0px 0px;
-			background-image: url(../assets/Background-bluberry.png);
-			display: flex;
-			justify-content: space-between;
-			flex-direction: column;
-			border-radius: 5px;
-		}
-
-		.elem1__top {
-			display: flex;
-			align-items: flex-start;
-			justify-content: space-between;
-			padding: 12px 12px 23px 12px;
-			border-radius: 5px;
-			background: linear-gradient(
-				to bottom,
-				rgba(0, 0, 0, 0.3),
-				rgba(0, 0, 0, 0)
-			);
-
-			.elem1__top-icons {
-				display: flex;
-				flex-direction: column;
-
-				img {
-					padding-bottom: 4px;
-				}
-			}
-		}
-
-		.elem1__bottom {
-			display: flex;
-			justify-content: space-between;
-			padding: 12px;
-			align-items: flex-end;
-			background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
-			border-radius: 5px;
-			.elem1__bottom__discont-info {
-				.elem1__bottom-discont {
-					@include text-shape;
-
-					background-color: rgba(255, 91, 198, 1);
-					margin-bottom: 4px;
-					font-weight: 600;
-				}
-
-				.elem1__bottom-info {
-					@include text-shape;
-
-					font-weight: 600;
-					background-color: rgba(57, 176, 244, 1);
-				}
-			}
-
-			.elem1__bottom-price-button {
-				display: flex;
-				align-items: center;
-
-				p {
-					padding: 6px 8px 6px 0px;
-					font-weight: 700;
-				}
-				button {
-					@include request-buy-button;
-				}
-			}
-		}
-	}
 	.items__group2 {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		border-radius: 5px;
-		.items__group2-elem2 {
+		.elem1 {
 			width: 387px;
 			height: 154px;
 			border-radius: 5px 0px 0px 0px;
-			background-image: url(../assets/Background-carrot.png);
+			background-image: url(../public/Background-bluberry.png);
 			display: flex;
 			justify-content: space-between;
 			flex-direction: column;
 			border-radius: 5px;
-		}
-
-		.elem2__top {
-			display: flex;
-			align-items: flex-start;
-			justify-content: space-between;
-			padding: 12px 12px 23px 12px;
-			border-radius: 5px;
-			background: linear-gradient(
-				to bottom,
-				rgba(0, 0, 0, 0.3),
-				rgba(0, 0, 0, 0)
-			);
-
-			.elem1__top-icons {
+			&__top {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+				padding: 12px 12px 23px 12px;
+				border-radius: 5px;
+				background: linear-gradient(
+					to bottom,
+					rgba(0, 0, 0, 0.3),
+					rgba(0, 0, 0, 0)
+				);
+			}
+			&__icons {
 				display: flex;
 				flex-direction: column;
 
@@ -226,23 +147,108 @@ h2 {
 					padding-bottom: 4px;
 				}
 			}
-		}
 
-		.elem2__bottom {
-			display: flex;
-			justify-content: space-between;
-			padding: 12px;
-			align-items: flex-end;
-			background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
-			border-radius: 5px;
-			.elem2__bottom-discont {
+			&__bottom {
+				display: flex;
+				justify-content: space-between;
+				padding: 12px;
+				align-items: flex-end;
+				background: linear-gradient(
+					to top,
+					rgba(0, 0, 0, 0.3),
+					rgba(0, 0, 0, 0)
+				);
+				border-radius: 5px;
+			}
+
+			&__discont {
 				@include text-shape;
 
+				background-color: rgba(255, 91, 198, 1);
 				margin-bottom: 4px;
 				font-weight: 600;
 			}
 
-			.elem2__bottom-price-button {
+			&__info {
+				@include text-shape;
+
+				font-weight: 600;
+				background-color: rgba(57, 176, 244, 1);
+			}
+
+			&__button {
+				display: flex;
+				align-items: center;
+
+				p {
+					padding: 6px 8px 6px 0px;
+					font-weight: 700;
+				}
+				button {
+					@include request-buy-button;
+				}
+			}
+		}
+
+		.elem2 {
+			width: 387px;
+			height: 154px;
+			border-radius: 5px 0px 0px 0px;
+			background-image: url(../public/Background-carrot.png);
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			border-radius: 5px;
+			&__top {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+				padding: 12px 12px 23px 12px;
+				border-radius: 5px;
+				background: linear-gradient(
+					to bottom,
+					rgba(0, 0, 0, 0.3),
+					rgba(0, 0, 0, 0)
+				);
+			}
+			&__icons {
+				display: flex;
+				flex-direction: column;
+
+				img {
+					padding-bottom: 4px;
+				}
+			}
+
+			&__bottom {
+				display: flex;
+				justify-content: space-between;
+				padding: 12px;
+				align-items: flex-end;
+				background: linear-gradient(
+					to top,
+					rgba(0, 0, 0, 0.3),
+					rgba(0, 0, 0, 0)
+				);
+				border-radius: 5px;
+			}
+
+			&__discont {
+				@include text-shape;
+
+				background-color: rgba(255, 91, 198, 1);
+				margin-bottom: 4px;
+				font-weight: 600;
+			}
+
+			&__info {
+				@include text-shape;
+
+				font-weight: 600;
+				background-color: rgba(172, 89, 241, 1);
+			}
+
+			&__button {
 				display: flex;
 				align-items: center;
 
@@ -259,9 +265,15 @@ h2 {
 
 	.items__group3 {
 		display: flex;
-		// justify-content: space-between;
+		justify-content: space-between;
 		gap: 20px;
-		.items__group3-elem1 {
+		max-height: 183px;
+		.elem1 {
+			width: 184px;
+			height: 328px;
+			
+
+
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -270,45 +282,119 @@ h2 {
 			background-color: white;
 			border-radius: 5px;
 
-			.elem1__top {
+			&__top {
 				border-top-right-radius: 5px;
 				border-top-left-radius: 5px;
-				background-image: url('../assets/Background-corn.png');
+				background-image: url('../public/Background-corn.png');
 				width: 184px;
 				height: 183px;
+			}
+			&__info-icons {
+				display: flex;
+				justify-content: space-between;
+				padding: 10px;
+			}
+			&__icons {
+				display: flex;
+				justify-content: space-between;
+			}
+			&__info {
+				display: flex;
+				flex-direction: column;
+				p {
+					@include text-shape;
 
-				.elem1__info-icons {
-					display: flex;
-					justify-content: space-between;
-					padding: 10px;
-
-					.elem1__info {
-						display: flex;
-						flex-direction: column;
-
-						p {
-							@include text-shape;
-
-							margin-bottom: 4px;
-							background-color: rgba(255, 167, 38, 1);
-						}
-						span {
-							@include text-shape;
-							background-color: rgba(24, 197, 118, 1);
-						}
-					}
+					margin-bottom: 4px;
+					background-color: rgba(255, 167, 38, 1);
 				}
-
-				.elem1__top-icons {
-					display: flex;
-					flex-direction: column;
-
-					img {
-						padding-bottom: 4px;
-					}
+				span {
+					@include text-shape;
+					background-color: rgba(24, 197, 118, 1);
 				}
 			}
-			.elem1__bottom {
+
+			&__icons {
+				display: flex;
+				flex-direction: column;
+
+				img {
+					padding-bottom: 4px;
+				}
+			}
+
+			&__bottom {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				h3 {
+					font-size: 14px;
+					font-weight: 600;
+					text-align: left;
+					color: rgba(68, 68, 68, 1);
+					margin: 12px 0px 27px 0px;
+				}
+				p {
+					font-size: 20px;
+					font-weight: 700;
+					color: rgba(68, 68, 68, 1);
+					margin-bottom: 8px;
+				}
+				button {
+					@include request-buy-button;
+				}
+			}
+		}
+		.elem2 {
+			width: 184px;
+			height: 328px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			width: fit-content;
+			background-color: white;
+			border-radius: 5px;
+
+			&__top {
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
+				background-image: url('../public/Background-icecream.png');
+				width: 184px;
+				height: 183px;
+			}
+			&__info-icons {
+				display: flex;
+				justify-content: space-between;
+				padding: 10px;
+			}
+			&__icons {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			&__info {
+				display: flex;
+				flex-direction: column;
+
+				p {
+					@include text-shape;
+					background-color: rgba(172, 89, 241, 1);
+				}
+				span {
+					@include text-shape;
+				}
+			}
+
+			&__icons {
+				display: flex;
+				flex-direction: column;
+
+				img {
+					padding-bottom: 4px;
+				}
+			}
+
+			&__bottom {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
@@ -331,71 +417,44 @@ h2 {
 			}
 		}
 	}
+}
 
-	.items__group3-elem2 {
+/* 
+to do: adaptiv 
+
+syntaxis:
+@media (max-width: 768px) {
+  .item1 { order: 3; }
+  .item2 { order: 1; }
+  .item3 { order: 2; }
+}
+*/
+
+@media (max-width: 1350px) {
+	.items {
+		max-width: 1024px;
+		margin: auto;
+		.items__group1 {
+			order: 1;
+		}
+		.items__group3 {
+			order: 2;
+		}
+		.items__group2 {
+			order: 3;
+		}
+
+		.items__group3 {
+			
+			flex-direction: row;
+		}
+	}
+}
+
+@media (min-width: 1350px) {
+	.kostil {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-
-		width: fit-content;
-		background-color: white;
-		border-radius: 5px;
-
-		.elem1__top {
-			border-top-right-radius: 5px;
-			border-top-left-radius: 5px;
-			background-image: url('../assets/Background-icecream.png');
-			width: 184px;
-			height: 183px;
-
-			.elem1__info-icons {
-				display: flex;
-				justify-content: space-between;
-				padding: 10px;
-
-				.elem1__info {
-					display: flex;
-					flex-direction: column;
-
-					p {
-						@include text-shape;
-						background-color: rgba(172, 89, 241, 1);
-					}
-					span {
-						@include text-shape;
-					}
-				}
-			}
-
-			.elem1__top-icons {
-				display: flex;
-				flex-direction: column;
-
-				img {
-					padding-bottom: 4px;
-				}
-			}
-		}
-		.elem1__bottom {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			h3 {
-				font-size: 14px;
-				font-weight: 600;
-				text-align: left;
-				color: rgba(68, 68, 68, 1);
-				margin: 12px 0px 27px 0px;
-			}
-			p {
-				font-size: 20px;
-				font-weight: 700;
-				color: rgba(68, 68, 68, 1);
-				margin-bottom: 8px;
-			}
-			button {
-				@include request-buy-button;
-			}
-		}
+		justify-content: space-between;
+		gap: 20px;
 	}
 }
